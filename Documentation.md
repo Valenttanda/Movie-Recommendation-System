@@ -323,7 +323,7 @@ Diperoleh hasil ground truth untuk film **Avatar**, yaitu:
 Sistem rekomendasi dievaluasi menggunakan dua metrik ranking populer:
 
 a. Mean Reciprocal Rank (MRR)
-MRR menilai seberapa cepat sistem menemukan item yang relevan dalam daftar hasil.
+MRR menilai seberapa cepat sistem menemukan item yang relevan dalam daftar hasil.<br>
   $$\text{MRR} = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\text{rank}_i}$$
 
 Keterangan:
@@ -331,7 +331,7 @@ Keterangan:
 - $$|Q|$$: Jumlah query.
 - $$\text{rank}_i$$: Posisi (peringkat) item relevan pertama dalam daftar hasil ke- $$i$$
 
-b. Normalized Discounted Cumulative Gain (nDCG)
+b. Normalized Discounted Cumulative Gain (nDCG)<br>
 Metrik ini mempertimbangkan posisi item relevan dalam urutan rekomendasi.
   $$\text{DCG}_k = \sum_{i=1}{k} \frac{\text{rel}_i}{\log_2(i+1)}$$
   
