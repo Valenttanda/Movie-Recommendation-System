@@ -324,7 +324,8 @@ Sistem rekomendasi dievaluasi menggunakan dua metrik ranking populer:
 
 a. Mean Reciprocal Rank (MRR)
 MRR menilai seberapa cepat sistem menemukan item yang relevan dalam daftar hasil.<br>
-	$$\text{MRR} = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\text{rank}_i}$$
+
+$$\text{MRR} = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\text{rank}_i}$$
 
 Keterangan:
 
@@ -332,11 +333,13 @@ Keterangan:
 - $$\text{rank}_i$$: Posisi (peringkat) item relevan pertama dalam daftar hasil ke- $$i$$
 
 b. Normalized Discounted Cumulative Gain (nDCG)<br>
-Metrik ini mempertimbangkan posisi item relevan dalam urutan rekomendasi.<br>
+Metrik ini mempertimbangkan posisi item relevan dalam urutan rekomendasi.
 
-- 	$$\text{DCG}_k = \sum_{i=1}{k} \frac{\text{rel}_i}{\log_2(i+1)}$$
-  
-- 	$$\text{nDCG}_k = \frac{\text{DCG}_k}{\text{IDCG}_k}$$
+$$\text{nDCG}_k = \frac{\text{DCG}_k}{\text{IDCG}_k}$$
+
+dengan:
+
+$$\text{DCG}_k = \sum_{i=1}^{k} \frac{\text{rel}_i}{\log_2(i+1)}$$
 
 Keterangan:
 - $$k$$: Jumlah item dalam daftar (top-5).
@@ -418,7 +421,7 @@ Kesimpulan dari setiap skema sebagai berikut:
 
 **4. BERT Genres**
 
-- Hasil rekomendasi: 
+- Hasil rekomendasi:
 	X-Men: Days of Future Past, Man of Steel, Superman, Beastmaster 2: Through the Portal of Time, Superman II
 - Kelebihan:
   - Genre cocok, sci-fi/fantasy/action
@@ -433,5 +436,5 @@ Secara keseluruhan, pendekatan BERT dengan `overview` terlihat paling mendekati 
 
 ## References
 
-[1] Lops, P., De Gemmis, M., & Semeraro, G. (2011). Content-based recommender systems: State of the art and trends. In Recommender Systems Handbook (pp. 73-105). Springer.
+[1] Lops, P., De Gemmis, M., & Semeraro, G. (2011). Content-based recommender systems: State of the art and trends. In Recommender Systems Handbook (pp. 73-105). Springer.<br>
 [2] Zhang, S., Yao, L., Sun, A., & Tay, Y. (2019). Deep learning based recommender system: A survey and new perspectives. ACM Computing Surveys (CSUR), 52(1), 1–38. https://doi.org/10.1145/3285029
